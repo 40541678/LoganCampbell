@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>• L O G A N • C A M P B E L L •</title>
+</head>
+<body>
+    <div id="left-side" class="side">
+        <div class="menu-background-pattern">
+            <h2 class="title">
+            Welcome to my
+                <span class="fancy">portfolio</span>
+            </h2>
+        </div>
+    </div>
+
+    <div id="right-side" class="side">
+        <div class="menu-background-pattern">
+            <h2 class="title">
+            Welcome to my
+                <span class="fancy">brain</span>
+            </h2>
+        </div>
+    </div>
+
+
+<script>
+    const left = document.getElementById("left-side");
+
+    const handleOnMove = e => {
+       const p = e.clientX  / window.innerWidth * 100;
+       
+       left.style.width = `${p}%`;
+    }
+
+    document.onmousemove = e => handleOnMove(e);
+
+    document.ontouchmove = e => handleOnMove(e.touches[0]);
+</script>
+</body>
+</html>
